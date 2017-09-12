@@ -1,0 +1,15 @@
+PODS:
+  - Shimmer (1.0.2)
+  - Skeleton (0.1.0)
+
+DEPENDENCIES:
+  - Shimmer
+  - Skeleton
+
+SPEC CHECKSUMS:
+  Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
+  Skeleton: b76249b7d6a73a9913e164c8030647a3e005c700
+
+PODFILE CHECKSUM: dd4ab7cb774cb8419490868260d09cb5e549276f
+
+COCOAPODS: 1.2.1
