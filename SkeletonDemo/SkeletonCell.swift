@@ -12,6 +12,9 @@ import Shimmer
 
 class SkeletonCell: UITableViewCell {
   
+  @IBOutlet weak var backgroundImageView: UIImageView!
+  @IBOutlet weak var shimmeringBackground: FBShimmeringView!
+  @IBOutlet weak var shimmeringIcon: FBShimmeringView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var shimmeringView: FBShimmeringView!
   @IBOutlet weak var titleHolderView: GradientContainerView!
@@ -26,22 +29,41 @@ class SkeletonCell: UITableViewCell {
     iconImageView.layer.masksToBounds = true
     iconHolderView.layer.cornerRadius = 25
     iconHolderView.layer.masksToBounds = true
+    
     shimmeringView.contentView = titleLabel
     shimmeringView.isShimmering = true
     shimmeringView.shimmeringAnimationOpacity = 0.3
     shimmeringView.shimmeringPauseDuration = 0.1
-    shimmeringView.shimmeringDirection = .left
+    shimmeringView.shimmeringDirection = .right
     shimmeringView.shimmeringHighlightLength = 0.7
+    
+    
+    
+    shimmeringIcon.contentView = iconImageView
+    shimmeringIcon.isShimmering = true
+    shimmeringIcon.shimmeringAnimationOpacity = 0.4
+    shimmeringIcon.shimmeringDirection = .left
+    
+    
+    shimmeringBackground.contentView = backgroundImageView
+    shimmeringBackground.isShimmering = true
+    shimmeringBackground.shimmeringAnimationOpacity = 0.7
+    shimmeringBackground.shimmeringDirection = .left
+    
+    
     perform(#selector(hiddenTitlePlaceHolderView), with: nil, afterDelay: 1)
-    perform(#selector(hiddenIconPlaceHolderView), with: nil, afterDelay: 3)
-    perform(#selector(hiddenBackGroundPlaceHolderView), with: nil, afterDelay: 4)
-    perform(#selector(hiddenShimmeringView), with: nil, afterDelay: 4)
+    perform(#selector(hiddenIconPlaceHolderView), with: nil, afterDelay: 4)
+    perform(#selector(hiddenBackGroundPlaceHolderView), with: nil, afterDelay: 5)
+    perform(#selector(hiddenShimmeringView), with: nil, afterDelay: 7)
+    perform(#selector(hiddenShimmeringBackground), with: nil, afterDelay: 7)
+    perform(#selector(hiddenShimmeringIcon), with: nil, afterDelay: 7)
   }
   
   //MARK: - ActionLoading
   
   func hiddenBackGroundPlaceHolderView(){
     backGroundHolderView.isHidden = true
+    //shimmeringIcon.isShimmering = false
   }
   
   func hiddenIconPlaceHolderView(){
@@ -54,6 +76,14 @@ class SkeletonCell: UITableViewCell {
   
   func hiddenShimmeringView(){
     shimmeringView.isShimmering = false
+  }
+  
+  func hiddenShimmeringBackground(){
+    shimmeringBackground.isShimmering = false
+  }
+  
+  func hiddenShimmeringIcon(){
+   shimmeringIcon.isShimmering = false
   }
   
 }
