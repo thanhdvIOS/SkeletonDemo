@@ -20,9 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.makeKeyAndVisible()
     window?.rootViewController = UINavigationController(rootViewController: ViewController())
 
-    
-    // dang o nhanh 4
 
+    // dang o nhanh 4
+    //dang o nhanh3
     //dang o nhanh 1
     ///
 
