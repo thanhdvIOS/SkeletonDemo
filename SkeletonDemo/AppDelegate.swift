@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
     window?.rootViewController = UINavigationController(rootViewController: ViewController())
-    
+    // dang o nhanh 2
     return true
   }
 
