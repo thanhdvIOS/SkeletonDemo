@@ -58,13 +58,9 @@ extension ViewController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: cellid, for: indexPath) as! SkeletonCell
     
     cell.gradientLayers.forEach{
-      
-      gradientLayer in
-      let baseColor = cell.titleHolderView.backgroundColor!
-      gradientLayer.colors = [baseColor.cgColor,
-                              baseColor.brightened(by: 0.93).cgColor,
-                              baseColor.cgColor]
-      
+       gradientLayer in
+          let baseColor = cell.titleHolderView.backgroundColor!
+          gradientLayer.colors = [baseColor.cgColor, baseColor.brightened(by: 0.93).cgColor,baseColor.cgColor]
     }
     
     cell.slide(to: .right)
