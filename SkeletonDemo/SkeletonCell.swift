@@ -38,10 +38,9 @@ class SkeletonCell: UITableViewCell {
     shimmeringView.shimmeringHighlightLength = 0.7
     
     
-    
     shimmeringIcon.contentView = iconImageView
     shimmeringIcon.isShimmering = true
-    shimmeringIcon.shimmeringAnimationOpacity = 0.4
+    shimmeringIcon.shimmeringAnimationOpacity = 0.9
     shimmeringIcon.shimmeringDirection = .left
     
     
@@ -49,7 +48,7 @@ class SkeletonCell: UITableViewCell {
     shimmeringBackground.isShimmering = true
     shimmeringBackground.shimmeringAnimationOpacity = 0.7
     shimmeringBackground.shimmeringDirection = .left
-    
+    shimmeringBackground.shimmeringHighlightLength = 0.9
     
     perform(#selector(hiddenTitlePlaceHolderView), with: nil, afterDelay: 1)
     perform(#selector(hiddenIconPlaceHolderView), with: nil, afterDelay: 4)
